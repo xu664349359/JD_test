@@ -12,6 +12,8 @@
     border-top: 1px solid @mainColor;
     border-bottom: 1px solid @mainColor;
     line-height: 34px;
+    overflow: hidden;
+    position: relative;
     .fl{
         // line-height: 34px;
         padding-left: 20px;
@@ -27,8 +29,21 @@
             transform: scale(0.75);
 
         }
-   
+    
     }
+    .fr{
+        padding-right: 10px;
+     }
+     .position{
+        position: absolute;
+        top: 8px;
+        left: 7px;
+        background: url(../images/jd-sprites.png) -180px -70px no-repeat ;
+        width: 19px;
+        height: 18px;
+        background-size: 200px 200px;
+     }
+    
 }
 
 // 商品部分
@@ -39,20 +54,98 @@
         border-bottom:1px solid @mainColor;
         padding-left: 34px;
         height: 100px;
+        position: relative;
+       
         .img{
             float: left;
             height: 100%;
             width: 80px;
-            // padding-top: 10px;
+            padding-top: 10px;
             
-            background-color: blue;
+            // background-color: blue;
         }
         .goods_right{
             overflow: hidden;
-            background-color: red;
+            // background-color: red;
             height: 100%;
+            padding: 10px;
+            position: relative;
+            p{
+                overflow: hidden;
+                text-overflow:ellipsis;//文本溢出显示省略号
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .info{
+                position: absolute;
+                bottom:5px;
+                left: 5px;
+                height: 32px;
+                width: 100%;
+                .info_left{
+                    float: left;
+                    width: 120px;
+                    span{
+                        float: left;
+                        border: 1px solid @mainColor;
+                        height: 32px;
+                        width: 33.3%;
+                        box-sizing: border-box;
+                        text-align: center;
+                        line-height: 32px;
+                    }
+                    input{
+                        float: left;
+                        width: 33.3%;
+                        height: 32px;
+                        background-color:transparent;
+                        border-top: 1px solid @mainColor;
+                        border-bottom: 1px solid @mainColor;
+                        text-align: center;
+                    }  
+                }
+                .info_right{
+                    float: right;
+                    margin-top: 6px;
+                    margin-right: 10px;
+                    .top{
+                        background: url(../images/delete_up.png) no-repeat center;
+                        background-size: 18px 4px;
+                        width: 18px;
+                        height: 4px;
+                        display: block;
+                        transform: translateY(2px);
+                        transition: transform 1s;
+                        // overflow: hidden;
 
+                    }
+                    .bottom{
+                        background: url(../images/delete_down.png) no-repeat center;
+                        background-size: 34px/2 35px/2;
+                        width:17px  ;
+                        height:17.5px;
+                        display: block;
+                    }
+                }
+               
+            }
+
+        }
+        .position{
+            position: absolute;
+            top: 8px;
+            left: 7px;
+            background: url(../images/jd-sprites.png) -180px -70px no-repeat ;
+            width: 19px;
+            height: 18px;
+            background-size: 200px 200px;
         }
 
     }
+   
+}
+li.current .info_right .top{
+    transform:translateY(2px) rotate(30deg) !important;
+    transform-origin: right bottom;
 }

@@ -17,6 +17,7 @@ body {
   min-width: 320px;
   background-image: linear-gradient(to bottom, #ffffff, #cccccc);
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 50%;
   transform: translate(-50%);
@@ -78,6 +79,8 @@ body {
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   line-height: 34px;
+  overflow: hidden;
+  position: relative;
 }
 .title .fl {
   padding-left: 20px;
@@ -93,19 +96,148 @@ body {
   top: 10px;
   transform: scale(0.75);
 }
+.title .fr {
+  padding-right: 10px;
+}
+.title .position {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  background: url(../images/jd-sprites.png) -180px -70px no-repeat;
+  width: 19px;
+  height: 18px;
+  background-size: 200px 200px;
+}
 .goods li {
   border-bottom: 1px solid #cccccc;
   padding-left: 34px;
   height: 100px;
+  position: relative;
 }
 .goods li .img {
   float: left;
   height: 100%;
   width: 80px;
-  background-color: blue;
+  padding-top: 10px;
 }
 .goods li .goods_right {
   overflow: hidden;
-  background-color: red;
   height: 100%;
+  padding: 10px;
+  position: relative;
+}
+.goods li .goods_right p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods li .goods_right .info {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  height: 32px;
+  width: 100%;
+}
+.goods li .goods_right .info .info_left {
+  float: left;
+  width: 120px;
+}
+.goods li .goods_right .info .info_left span {
+  float: left;
+  border: 1px solid #cccccc;
+  height: 32px;
+  width: 33.3%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 32px;
+}
+.goods li .goods_right .info .info_left input {
+  float: left;
+  width: 33.3%;
+  height: 32px;
+  background-color: transparent;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+}
+.goods li .goods_right .info .info_right {
+  float: right;
+  margin-top: 6px;
+  margin-right: 10px;
+}
+.goods li .goods_right .info .info_right .top {
+  background: url(../images/delete_up.png) no-repeat center;
+  background-size: 18px 4px;
+  width: 18px;
+  height: 4px;
+  display: block;
+  transform: translateY(2px);
+  transition: transform 1s;
+}
+.goods li .goods_right .info .info_right .bottom {
+  background: url(../images/delete_down.png) no-repeat center;
+  background-size: 17px 17.5px;
+  width: 17px  ;
+  height: 17.5px;
+  display: block;
+}
+.goods li .position {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  background: url(../images/jd-sprites.png) -180px -70px no-repeat;
+  width: 19px;
+  height: 18px;
+  background-size: 200px 200px;
+}
+li.current .info_right .top {
+  transform: translateY(2px) rotate(30deg) !important;
+  transform-origin: right bottom;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.625);
+  z-index: 999999;
+  display: none;
+}
+.modal .content {
+  width: 300px;
+  height: 150px;
+  padding: 0 10px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 50%;
+  border-radius: 10px;
+}
+.modal .content .modal_header {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+.modal .content .modal_footer {
+  padding-top: 10px;
+}
+.modal .content .modal_footer span {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-right: 30px;
+  text-align: center;
+  line-height: 40px;
+  color: #333;
+  cursor: pointer;
+}
+.modal .content .modal_footer span:last-child {
+  margin-right: 0;
+  color: #fff;
+  background-color: red;
 }
