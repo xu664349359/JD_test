@@ -1,0 +1,111 @@
+body {
+  height: 2000px;
+}
+.jd_cart {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 44px;
+  height: 2000px;
+}
+.jd_header {
+  padding: 0 44px;
+  height: 44px;
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 44px;
+}
+.jd_header p {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+.jd_header::before,
+.jd_header::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  height: 20px;
+  background: url(../images/jd-sprites.png) no-repeat;
+  background-size: 200px 200px;
+}
+.jd_header::before {
+  left: 10px;
+  width: 13px;
+  background-position: -25px 0;
+}
+.jd_header::after {
+  right: 10px;
+  background-position: -60px 0;
+  width: 19px;
+}
+.jd_tips {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  height: 34px;
+  background-color: pink;
+  line-height: 34px;
+  text-align: center;
+}
+.jd_tips p {
+  padding-left: 20px;
+  display: inline-block;
+  position: relative;
+}
+.jd_tips p .safe {
+  background-image: url(../images/safe_icon.png);
+  width: 18px;
+  height: 18px;
+  background-size: 18px 18px;
+  position: absolute;
+  top: 7px;
+  left: -5px;
+}
+.jd_content {
+  padding-top: 30px;
+}
+.title {
+  height: 34px;
+  width: 100%;
+  padding-left: 34px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  line-height: 34px;
+}
+.title .fl {
+  padding-left: 20px;
+  position: relative;
+}
+.title .fl .logo {
+  background: url(../images/jd-sprites.png) 0 0 no-repeat;
+  background-size: 200px 200px;
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  left: -3px;
+  top: 10px;
+  transform: scale(0.75);
+}
+.goods li {
+  border-bottom: 1px solid #cccccc;
+  padding-left: 34px;
+  height: 100px;
+}
+.goods li .img {
+  float: left;
+  height: 100%;
+  width: 80px;
+  background-color: blue;
+}
+.goods li .goods_right {
+  overflow: hidden;
+  background-color: red;
+  height: 100%;
+}

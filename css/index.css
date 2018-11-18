@@ -1,0 +1,289 @@
+/* window{
+scrollY:0;
+} */
+.jd_box{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    /* background-color: pink; */
+    /* height: 2000px; */
+    margin: 0 auto;
+}
+/* 头部区域 */
+.jd_header{
+    
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 50px;
+    height: 40px;
+    /* background-color: red; */
+    max-width: 640px;
+    min-width: 320px;
+    position: fixed;
+    z-index: 10000;
+    
+}
+/* logo区域 */
+.jd_header .jd_logo{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 57px;
+    height: 22px;
+    /* background-color: blue; */
+    background: url(../images/jd-sprites.png) 0 -109px;
+    background-size: 200px 200px;
+}
+/* 搜索框区域 */
+.jd_header .jd_search input{
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background-color:rgba(0,0,0,0);
+    border: 1px solid #ccc;
+    padding-left: 35px;
+    /* position: relative; */
+    color: #fff;
+
+    
+}
+.jd_header .jd_search {
+    position: relative;
+}
+/* 搜索放大镜 */
+.jd_header .jd_search i{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(../images/jd-sprites.png) -59px -109px ;
+    background-size: 200px 200px;
+}
+/* 登录区域 */
+.jd_header .jd_login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    /* background-color: orange; */
+    text-align: center;
+    line-height: 40px;
+}
+.jd_header .jd_login a{
+    color: white;
+    display: block;
+}
+
+/* 导航区域 平分ul 宽度自适应 */
+.jd_nav ul li a{ 
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+   
+    /* height: 40px ; */
+    /* background-color: red; */
+   
+}
+.jd_nav ul li{ 
+     float: left;
+     width: 20%;
+    overflow: hidden;
+}
+.jd_nav ul li img{
+    width: 40px;
+    height: 40px;
+    margin: 0px auto;  
+}
+
+
+
+/* 新闻快报区域 */
+
+.jd_news{
+    height: 30px;
+    overflow: hidden;
+    /* width: 100%; */
+    /* max-width: 640px; */
+    /* min-width: 320px; */
+    background-color: #ddd;
+    margin:10px;
+    border-radius: 5px;
+    padding: 0 40px 0 82px; 
+    position: relative;
+}
+.jd_news .jd_logo{
+    width:73px ;
+    height: 16px;
+    position: absolute;
+    top:8px;
+    left:8px;
+    background: url(../images/jd-news-tit.png) no-repeat;
+    background-size: 73px 16px;
+}
+.jd_news ul li{
+    width: 100%;
+    line-height: 30px;
+    height: 30px;
+    /* overflow: hidden; */
+}
+.jd_news .jd_more a{
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-right: 10px;
+    line-height: 30px;
+    height: 30px;
+}
+/* 京东秒杀区域 */
+.jd_seckill .jd_time{
+    height: 30px;
+    background-color: #fff;
+}
+.jd_seckill .jd_time .jd_clock{
+    padding-left: 30px;
+    color: red;
+    line-height: 30px;
+    position: relative;
+}
+
+.jd_seckill .jd_time .jd_clock i{
+    width: 20px;
+    height: 22px;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    background:url(../images/jd-sprites.png) -83px -109px;
+    background-size: 200px 200px;
+}
+/* 倒计时区域 */
+
+.jd_seckill .jd_time .jd_hour span{
+    display: block;
+    float: left;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 2px;
+    color: #fff;
+    margin: 4px;
+}
+.jd_seckill .jd_time .jd_hour span:nth-child(2n){
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    margin:5px 0px;
+}
+
+/*  更多区域 */
+.jd_seckill .jd_time a{
+    width: 70px;
+    height: 30px;
+    padding-right:  10px;
+    line-height: 30px;
+}
+/* 秒杀内容区域 */
+.jd_content{
+    overflow: scroll;
+}
+.jd_content ul{
+    width: 2000px;
+}
+.jd_content li{
+    width: 87px;
+    height: 106px;
+    float: left;
+    border-right: 1px solid #ccc;
+    background-color: #fff;
+  
+}
+.jd_content li:last-child{
+    border:none;
+}
+.jd_content li a{
+    text-align: center;
+    /* a  转换成块级 只是为了增大点击区域
+    而a包含图片和1其他元素会撑大a的面积 
+    故不用转换成块级
+    */
+    /* display: block;  */
+    /* display: inline-block; */
+   /* height: 100%;  */
+   color: red;
+   font-weight: bold;
+
+}
+.jd_content li img{
+    width: 60px;
+    height: 60px;
+    margin: 5px auto;
+}
+.jd_content li p:nth-of-type(2){
+    text-decoration: line-through;
+    font-weight: normal;
+    color: rgb(128, 125, 125);
+}
+/* 主会场区域 */
+
+.jd_major a{
+    display: block;
+    width: 33.33%;
+    float: left;
+}
+/* 产品区域 */
+.jd_product li {
+    overflow: hidden;
+  }
+  .jd_product li a {
+    float: left;
+    width: 50%;
+  }
+  /* 单独定制第一个 li 的 a */
+  .jd_product li:first-child a {
+    width: 33.3%;
+    float: left;
+    
+  }
+  /* 京东banner区域 */
+  
+  .jd_banner ul li{
+    width: 10%;
+    float: left;
+  }
+  .jd_banner ul{
+      width: 1000%;
+      transform: translateX(-10%);
+      
+  }
+  .jd_banner{
+      position: relative;
+      overflow: hidden;
+  }
+  .jd_banner ol{
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      /* background-color: red; */
+  }
+  .jd_banner ol li{
+      float: left;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin: 0 5px;
+      border:1px solid #ccc;
+      text-align: center;
+      line-height: 15px;
+      color: #fff;
+
+  }
+  .jd_banner ol li.current{
+      background-color: #fff;
+      color: #000;
+  }
+
+

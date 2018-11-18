@@ -1,0 +1,58 @@
+@import "var";
+
+.jd_content{
+    padding-top: 30px;
+}
+// 头部区域
+.title{
+
+    height: 34px;
+    width: 100%;
+    padding-left:34px;
+    border-top: 1px solid @mainColor;
+    border-bottom: 1px solid @mainColor;
+    line-height: 34px;
+    .fl{
+        // line-height: 34px;
+        padding-left: 20px;
+        position: relative;
+        .logo{
+            background: url(../images/jd-sprites.png) 0 0 no-repeat;
+            background-size: 200px 200px;
+            width: 20px;
+            height: 15px;
+            position: absolute;
+            left: -3px;
+            top: 10px;
+            transform: scale(0.75);
+
+        }
+   
+    }
+}
+
+// 商品部分
+
+.goods{
+    // padding-left: 34px;
+    li{
+        border-bottom:1px solid @mainColor;
+        padding-left: 34px;
+        height: 100px;
+        .img{
+            float: left;
+            height: 100%;
+            width: 80px;
+            // padding-top: 10px;
+            
+            background-color: blue;
+        }
+        .goods_right{
+            overflow: hidden;
+            background-color: red;
+            height: 100%;
+
+        }
+
+    }
+}

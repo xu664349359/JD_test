@@ -1,0 +1,52 @@
+
+
+//头部区域
+.jd_header{
+    padding:0 44px;
+    height: 44px;
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    background-image: linear-gradient(to bottom,#fff , #ccc);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    
+    line-height: 44px;
+    p{
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+    }
+    &::before,
+    &::after{
+        content: "";
+        // display: block;
+        position: absolute;
+        top: 15px;
+       
+        // width: 44px;
+        height: 20px;
+        background:url(../images/jd-sprites.png) no-repeat;
+        background-size: 200px 200px;
+
+    }
+    &::before{
+        left: 10px;
+        // background: url(../images/)
+        width: 13px;
+       
+        background-position: -25px 0;
+
+    }
+    &::after{
+        right: 10px;
+        background-position: -60px 0;
+        width: 19px;
+
+    }
+}
+
+
+
